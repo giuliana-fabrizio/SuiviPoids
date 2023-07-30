@@ -1,0 +1,98 @@
+body {
+    font-size: 12pt;
+    padding: 20px;
+}
+
+.btn {
+    background: #ffffff;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.btn_imprimer {
+    border-color: #4682b4;
+    color: #4682b4;
+}
+
+.btn_imprimer:hover {
+    border-color: #4682b4;
+    color: #4682b4;
+}
+
+.btn_reset {
+    border-color: #8b0000;
+    color: #8b0000;
+}
+
+.btn_reset:hover {
+    border-color: #8b0000;
+    color: #8b0000;
+}
+
+.btn_submit {
+    border-color: #006400;
+    color: #006400;
+}
+
+.btn_submit:hover {
+    border-color: #006400;
+    color: #006400;
+}
+
+.card{
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.erreur {
+    color: #ff0000;
+    margin-left: 10px;
+}
+
+h3 {
+    margin: 50px;
+    text-align: center;
+}
+
+h4 {
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+input {
+    border-radius: 5px;
+    border-width: 1px;
+    margin-left: 10px;
+    width: 25%;
+}
+
+label {
+    margin-bottom: 10px;
+}
+
+.ligne {
+    display: flex;
+    height: 30px;
+    margin: 10px;
+}
+
+.response {
+    margin-left: 10px;
+    margin-top: 30px;
+}
+
+select {
+    background: #ffffff;
+    border-radius: 5px;
+    border-width: 1px;
+    margin-left: 10px;
+    text-align: center;
+    width: 25%;
+}
+
+.separation {
+    background: #808080;
+    height: 1px;
+    margin-top : 50px;
+}
