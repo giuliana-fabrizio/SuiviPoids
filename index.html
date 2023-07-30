@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>IMC 📈</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+    
+    <h3>Tout savoir sur l'IMC</h3>
+<!-- ------------------------------------------------------ -->
+    <h4>Qu'est ce que l'IMC ?</h4>
+    <p>
+        L’IMC <strong>(indice de masse corporelle)</strong> est un indicateur <strong>utilisé par l’OMS</strong> pour déterminer si un individu homme, femme ou enfant, est en sous-poids, en surcharge pondérale ou obèse. C’est un indice particulièrement fiable pour déterminer s’il est nécessaire de prendre ou de perdre du poids.
+        <br>Le calcul de l'IMC pose cependant problème pour les <strong>enfants de moins de 18 ans</strong> pour qui cet indicateur doit être croisé avec d’autres paramètres, comme le sexe et la courbe de croissance, etc, pour obtenir un résultat valide.
+    </p>
+<!-- ------------------------------------------------------ -->
+    <h4>Comment interpréter ce résultat ?</h4>
+    <p>La valeur de L'IMC s'analyse différemment en fonction de votre sexe. Dans le tableau ci-dessous vous trouverez comment interpréter ce résultat en fonction de votre sexe.</p>
+    <table class="table table-striped table-warning">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Femme ♀️</th>
+                <th>Homme ♂️</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Insuffisance pondérale</td>
+                <td>IMC < 19.1</td>
+                <td>IMC < 20.7</td>
+            </tr>
+            <tr>
+                <td>Poids idéal</td>
+                <td>IMC < 25.8</td>
+                <td>IMC < 26.4</td>
+            </tr>
+            <tr>
+                <td>Limite du surpoids</td>
+                <td>IMC < 27.3</td>
+                <td>IMC < 27.8</td>
+            </tr>
+            <tr>
+                <td>Surpoids</td>
+                <td>IMC < 32.3</td>
+                <td>IMC < 31.1</td>
+            </tr>
+            <tr>
+                <td>Obésité</td>
+                <td>IMC >= 32.3</td>
+                <td>IMC >= 31.1</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="separation"></div>
+    <!-- ------------------------------------------------------ -->
+    <h3>Calculer mon IMC</h3>
+
+    <div class="card">
+        <div class="ligne">
+            <label for="id_sexe">Sexe :</label>
+            <select id="id_sexe">
+                <option value="femme">Femme ♀️</option>
+                <option value="homme">Homme ♂️</option>
+            </select>
+        </div>
+
+        <div class="ligne">
+            <label for="id_poids">Poids ⚖️ (kg) :</label>
+            <input id="id_poids" type="number">
+            <p id="id_erreur_poids" class="erreur"></p>
+        </div>
+
+        <div class="ligne">
+            <label for="id_taille">Taille 📏 (m) :</label>
+            <input id="id_taille" type="number">
+            <p id="id_erreur_taille" class="erreur"></p>
+        </div>
+    </div>
+
+    <button type="submit" onclick="calculer()" class="btn btn_submit">Calculer 🧮</button>
+    <button type="reset" onclick="reset()" class="btn btn_reset">Effacer 🗑️</button>
+    <button type="submit" onclick="imprimer()" class="btn btn_imprimer">Imprimer 🖨️</button>
+
+    <p id="id_imc" class="response"></p>
+
+    <div id="id_graph"></div>
+
+</body>
+
+</html>
